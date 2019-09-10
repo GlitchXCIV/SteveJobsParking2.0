@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="553.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <AnchorPane fx:id="box" minHeight="0.0" minWidth="0.0" opacity="0.86" prefHeight="565.0" prefWidth="640.0" style="-fx-background-color: #393939;" stylesheets="@style.css">
+            <children>
+            <ImageView fitHeight="462.0" fitWidth="495.0" layoutX="-32.0" layoutY="199.0">
+               <image>
+                  <Image url="@../img/23000-ferrari-enzo-silhouette.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="boxmenu" layoutX="26.0" layoutY="179.0" prefHeight="194.0" prefWidth="588.0">
+               <children>
+                      <Button fx:id="enter_button" layoutX="91.0" layoutY="101.0" mnemonicParsing="false" onAction="#enter" prefHeight="73.0" prefWidth="166.0" style="-fx-background-color: #B23900;" text="    ENTRATA" textFill="WHITE">
+                          <font>
+                              <Font name="Cooper Black" size="24.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="exit_button" layoutX="344.0" layoutY="101.0" mnemonicParsing="false" onAction="#exit" prefHeight="73.0" prefWidth="151.0" style="-fx-background-color: #B23900;" text="      USCITA" textFill="WHITE">
+                          <font>
+                              <Font name="Cooper Black" size="24.0" />
+                          </font>
+                      </Button>
+                      <Label layoutX="106.0" layoutY="35.0" prefHeight="66.0" prefWidth="383.0" text="SELEZIONA COSA VUOI FARE" textAlignment="CENTER" textFill="WHITE">
+                          <font>
+                              <Font name="Calibri" size="32.0" />
+                          </font>
+                      </Label>
+                  <ImageView fitHeight="43.0" fitWidth="42.0" layoutX="91.0" layoutY="116.0">
+                     <image>
+                        <Image url="@../img/enter.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="42.0" fitWidth="51.0" layoutX="344.0" layoutY="117.0">
+                     <image>
+                        <Image url="@../img/exit.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+                <Pane fx:id="boxIn" layoutX="7.0" layoutY="88.0" prefHeight="398.0" prefWidth="621.0" visible="false">
+                    <children>
+                        <Label layoutX="167.0" layoutY="25.0" prefHeight="43.0" prefWidth="287.0" text="Inserisci la targa del tuo veicolo" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Cooper Black" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="input" layoutX="192.0" layoutY="83.0" prefHeight="42.0" prefWidth="238.0" style="-fx-background-color: white;" />
+                        <Button fx:id="confirmInput_button" layoutX="220.0" layoutY="340.0" mnemonicParsing="false" onAction="#confirmInput" prefHeight="34.0" prefWidth="182.0" style="-fx-background-color: #B23900;" text="CONFERMA" textFill="WHITE">
+                            <font>
+                                <Font name="Cooper Black" size="24.0" />
+                            </font>
+                        </Button>
+                  <TextField fx:id="kindLabel" layoutX="362.0" layoutY="108.0" prefHeight="43.0" prefWidth="232.0" style="-fx-background-color: white;" visible="false" />
+                  <Label layoutX="191.0" layoutY="151.0" prefHeight="43.0" prefWidth="238.0" text="Seleziona il tipo di veicolo" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="car_button" layoutX="193.0" layoutY="209.0" mnemonicParsing="false" onAction="#carButton" text="CAR" />
+                  <Button fx:id="scooter_button" layoutX="264.0" layoutY="209.0" mnemonicParsing="false" onAction="#scooterButton" text="SCOOTER" />
+                  <Button fx:id="truck_button" layoutX="373.0" layoutY="209.0" mnemonicParsing="false" onAction="#truckBrutton" text="TRUCK" />
+                  <Label fx:id="typeStamp" layoutX="19.0" layoutY="225.0" prefHeight="42.0" prefWidth="101.0" style="-fx-background-color: black;" textFill="WHITE" visible="false" />
+                  <ImageView fx:id="back1" accessibleRole="BUTTON" fitHeight="57.0" fitWidth="58.0" layoutX="19.0" layoutY="14.0" onMouseClicked="#backmenu">
+                     <image>
+                        <Image url="@../img/return_473319.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="backMenuInput" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#backMenuIn" prefHeight="57.0" prefWidth="67.0" style="-fx-background-color: none;" />
+                    </children>
+                </Pane>
+                <Pane fx:id="boxOut" layoutX="14.0" layoutY="88.0" prefHeight="398.0" prefWidth="588.0" visible="false">
+                    <children>
+                        <Label layoutX="151.0" layoutY="87.0" prefHeight="43.0" prefWidth="287.0" text="Inserisci la targa del tuo veicolo" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Cooper Black" size="20.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="conirmOutput_button" layoutX="204.0" layoutY="199.0" mnemonicParsing="false" onAction="#confirmOutput" prefHeight="34.0" prefWidth="181.0" style="-fx-background-color: #B23900;" text="INVIO" textFill="WHITE">
+                            <font>
+                                <Font name="Cooper Black" size="24.0" />
+                            </font>
+                        </Button>
+                        <TextField fx:id="output" layoutX="175.0" layoutY="130.0" prefHeight="42.0" prefWidth="238.0" style="-fx-background-color: white;" />
+                  <ImageView fitHeight="51.0" fitWidth="53.0" layoutX="23.0" layoutY="14.0">
+                     <image>
+                        <Image url="@../img/return_473319.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="back" layoutX="12.0" layoutY="8.0" mnemonicParsing="false" onAction="#backmenu" prefHeight="66.0" prefWidth="75.0" style="-fx-background-color: none;" />
+                    </children>
+                </Pane>
+                <Pane fx:id="bloccoPaga" layoutX="164.0" layoutY="153.0" prefHeight="187.0" prefWidth="306.0" visible="false">
+                    <children>
+                        <Label layoutX="63.0" prefHeight="43.0" prefWidth="181.0" text="Importo da pagare" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="Cooper Black" size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="payment" disable="true" layoutX="34.0" layoutY="60.0" prefHeight="42.0" prefWidth="238.0" style="-fx-background-color: white;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="menu" layoutX="78.0" layoutY="122.0" mnemonicParsing="false" onAction="#restartMenu" prefHeight="51.0" prefWidth="151.0" style="-fx-background-color: #B23900;" text="MENU" textFill="WHITE">
+                     <font>
+                        <Font name="Cooper Black" size="24.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </Pane>
+            <Pane prefHeight="83.0" prefWidth="640.0" style="-fx-background-color: black;">
+               <children>
+                      <Label layoutX="428.0" layoutY="14.0" prefHeight="43.0" prefWidth="122.0" text="STEVEJOBS" textAlignment="CENTER" textFill="WHITE">
+                          <font>
+                              <Font name="Trebuchet MS" size="23.0" />
+                          </font>
+                      </Label>
+                  <Label layoutX="479.0" layoutY="36.0" prefHeight="43.0" prefWidth="122.0" text="PARKING" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Trebuchet MS" size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="73.0" fitWidth="51.0" layoutX="575.0" layoutY="5.0">
+                     <image>
+                        <Image url="@../img/steve-jobs_marchio-square.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="time" layoutX="239.0" prefHeight="83.0" prefWidth="189.0" text="" textAlignment="CENTER" textFill="#b23900">
+                     <font>
+                        <Font name="Trebuchet MS" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="stampPopUp" layoutX="125.0" layoutY="9.0" prefHeight="66.0" prefWidth="195.0" text="0/50" textFill="#b23900">
+                     <font>
+                        <Font name="Calibri" size="33.0" />
+                     </font></Label>
+                  <ImageView fitHeight="66.0" fitWidth="67.0" layoutX="14.0" layoutY="9.0">
+                     <image>
+                        <Image url="@../img/icon-parking.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

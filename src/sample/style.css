@@ -1,0 +1,11 @@
+.typeVehicle{
+        -fx-background-color: #B23900;
+}
+.typeVehicle:hover{
+
+        -fx-background-color:grey;
+}
+
+.resetVehicle {
+        -fx-background-color: white;
+}
